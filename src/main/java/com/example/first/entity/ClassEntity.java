@@ -22,7 +22,7 @@ public class ClassEntity {
 	@Column(name="name")
 	private String name;
 
-	@OneToMany(mappedBy="class")
+	@OneToMany(mappedBy="classes")
 	List<StudentEntity> students = new ArrayList<>();
 	
 	public ClassEntity() {

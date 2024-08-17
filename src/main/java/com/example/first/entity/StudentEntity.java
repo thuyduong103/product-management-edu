@@ -32,12 +32,14 @@ public class StudentEntity {
 	private double mathScore;
 	
 	@Column(name="english")
-	private String engScore;
+	private double engScore;
 	
 	@ManyToOne
 	@JoinColumn(name="class_id")
 	
 	private ClassEntity classes;
+	
+	
 	
 
 	public ClassEntity getClasses() {
@@ -52,7 +54,7 @@ public class StudentEntity {
 		super();
 	}
 
-	public StudentEntity(Long id, String fullName, String phone, String birth, double mathScore, String engScore) {
+	public StudentEntity(Long id, String fullName, String phone, String birth, double mathScore, double engScore) {
 		super();
 		this.id = id;
 		this.fullName = fullName;
@@ -102,11 +104,11 @@ public class StudentEntity {
 		this.mathScore = mathScore;
 	}
 
-	public String getEngScore() {
+	public double getEngScore() {
 		return engScore;
 	}
 
-	public void setEngScore(String engScore) {
+	public void setEngScore(double engScore) {
 		this.engScore = engScore;
 	}
 	
